@@ -1,0 +1,2 @@
+class InvoiceHistory < ApplicationRecord
+end

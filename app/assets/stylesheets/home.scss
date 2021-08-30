@@ -1,0 +1,184 @@
+*, html, body, ul, ol{
+	margin: 0;
+	padding: 0;
+}
+h1, h2, h3, h4, h5, h6, p{
+	margin: 0 0 5px;
+	padding: 0;
+}
+.pt-3{padding-top: 3rem}
+body{
+	font-family: arial;
+	font-size: 12px;
+}
+.container{
+	width: 960px;
+	margin:0 auto;
+}
+.row{
+	display: flex;
+    flex-wrap: wrap;
+}
+.row-col-2>* {
+    flex: 0 0 auto;
+    width: 50%;
+}
+.info{margin-top: 3rem;}
+.info p{margin-bottom: .5rem}
+.info p span{
+	width: 30%;
+    display: inline-block;
+}
+.info-centerd{ 
+	margin-left: 149px;
+	margin-top: 0;
+}
+.info-centerd p span{
+	width: 40%;
+}
+.info-supplier{
+	border: 1px solid #000;
+    padding: 5px;
+}
+.info-supplier-body{}
+.info-supplier-body p{margin-bottom: .5rem}
+.info-supplier-body p span{
+	width: 30%;
+    display: inline-block;
+}
+.supplier-data{}
+.supplier-data-heading, .supplier-data-content{
+	display: flex;
+    list-style: none;
+    border: 1px solid #000;
+}
+.supplier-data-heading li, .supplier-data-content li{
+	    flex: 1;
+    text-align: center;
+    padding: 2px;
+    border-right: 1px solid #000;
+}
+.supplier-data-heading li:last-child, .supplier-data-content li:last-child{
+	border-right: none;
+}
+.supplier-data-heading:first-child{
+	border-bottom: none;
+}
+.supplier-data-content{}
+.supplier-data-content li{}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-color: grey;
+}
+.table-bordered {
+    border: 1px solid #ddd;
+}
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+.table>caption+thead>tr:first-child>td, .table>caption+thead>tr:first-child>th, .table>colgroup+thead>tr:first-child>td, .table>colgroup+thead>tr:first-child>th, .table>thead:first-child>tr:first-child>td, .table>thead:first-child>tr:first-child>th {
+    border-top: 0;
+}
+.table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+    border-bottom-width: 1px;
+}
+.table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+    border: 1px solid #000;
+}
+.table>thead>tr>th {
+    vertical-align: bottom;
+    border-bottom: 1px solid #000;
+    background-color: #8e0000;
+    color: #fff;
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    padding: 5px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #000;
+    text-align: center;
+}
+.row-reverse{
+	flex-direction: row-reverse;
+}
+.grand-total{
+	display: flex;
+    align-items: baseline;
+}
+.grand-total-heading{
+	flex: 1;
+    border-bottom: 1px solid #000;
+    text-align: center;
+    padding-bottom: 5px;
+}
+.grand-total-data{
+	    border: 1px solid #000;
+    padding: 5px 20px;
+    min-width: 150px;
+    text-align: center;
+}
+.panel{margin-top: 1rem}
+.panel-heading{
+	display: flex;
+}
+.panel-heading>*{
+flex: 1;
+padding: 5px;
+color: #fff;
+text-align:center;
+background-color: #8e0000;
+}
+.panel-body{
+    display: flex;
+    border: 1px solid #000;
+    margin-top: 5px;
+    margin-bottom: 1rem;
+}
+.panel-body>*{
+	flex: 1;
+    padding: 5px;
+}
+.border-right{border-right: 1px solid #000;}
+.sig{
+	    font-size: 13px;
+    text-decoration: underline;
+    margin-bottom: 1rem;
+    margin-left: 11rem; 
+}
+.card{
+	margin-bottom: 2rem;
+}
+.card > span{
+	    border: 1px solid #000;
+    padding: 5px;
+    text-decoration: underline;
+    display: inline-block;
+    margin-bottom: .1rem;
+}
+.card div{
+	    padding: 5px;
+    border: 1px solid #000;
+}
+.card div ol{
+	padding-left: 1rem;
+}
+.card div ol li{
+	padding-bottom: .4rem;
+}
+.card div ol li:last-child{
+	padding-bottom: 0;
+}
+footer{
+	color: #fff;
+text-align:center;
+background-color: #8e0000;
+padding: 5px;
+}

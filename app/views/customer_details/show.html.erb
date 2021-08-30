@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Customername:</strong>
+  <%= @customer_detail.CustomerName %>
+</p>
+
+<p>
+  <strong>Poc:</strong>
+  <%= @customer_detail.POC %>
+</p>
+
+<p>
+  <strong>Billingaddress:</strong>
+  <%= @customer_detail.BillingAddress %>
+</p>
+
+<p>
+  <strong>Installationaddress:</strong>
+  <%= @customer_detail.InstallationAddress %>
+</p>
+
+<p>
+  <strong>Attendentcontact:</strong>
+  <%= @customer_detail.AttendentContact %>
+</p>
+
+<%= link_to 'Edit', edit_customer_detail_path(@customer_detail) %> |
+<%= link_to 'Back', customer_details_path %>

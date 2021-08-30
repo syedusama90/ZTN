@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>ZTM</title>
+
+  <!-- style -->
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="row row-col-2 pt-3">
+      <div class="col">
+        <div class="logo">
+          <a href="">
+            <%= image_tag ("logo.png") %>
+          </a>
+        </div>
+        <div class="info">
+        <% @customer_details.each do |customer_detail| %>
+          <p><span>Customer Name:</span> <%= customer_detail.CustomerName %></p>
+          <p><span>POC:</span><%= customer_detail.POC %></p>
+          <p><span>Billing Address:</span><%= customer_detail.BillingAddress %> </p>
+          <p><span>Installation Address:</span> <%= customer_detail.InstallationAddress %></p>
+          <p><span>Attendant/Contact:</span><%= customer_detail.AttendentContact %></p>
+          <p><span>STAX NO/NTN:</span> </p>
+          <p><%= link_to 'Destroy', customer_detail, method: :delete, data: { confirm: 'Are you sure?' } %> </p>
+          <% end %>
+        </div>
+      </div>
+      <div class="col">
+        <div class="info info-centerd">
+          <p><span>Customer ID/USID:</span><% @s= SecureRandom.uuid%><%=@s%></p>
+          <p><span>Invoice Number:</span> Aug21-10001-601</p>
+          <p><span>Issue Date:</span><%=  Date.today.to_s(:long)%></p>
+          <p><span>Due Date:</span><%=  Date.today+9 %></p>
+          <p><span>Invoice Period:</span><%=  Date.today.month%> <%= Date.today.year%></p>
+        </div>
+        <div class="info-supplier">
+          <div class="info-supplier-body">
+            <p><span>Suppliers Name:</span> ZERO TIME NETWORKS PRIVATE LIMITED</p>
+            <p><span>Address:</span> 601-6, AL-HAFEEZ BUSINESS CENTER, BLOCK-3, GULBERG-III, LAHORE, </p>
+            <p><span>Telephone Number:</span> 042 35765515-</p>
+          </div>
+          <div class="supplier-data">
+            <ul class="supplier-data-heading">
+              <li>STRN</li>
+              <li>PSTN</li>
+              <li>NTN</li>
+            </ul>
+            <ul class="supplier-data-content">
+              <li>STRN</li>
+              <li>PSTN</li>
+              <li>NTN</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="table">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Sr. No</th>
+            <th>Description</th>
+            <th>Price(PKR)</th>
+            <th>PRA 19.5%</th>
+            <th>AIT 12.5%</th>
+            <th>Total Price (PKR)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>60 Mbps CIR B</td>
+            <td>108,000</td>
+            <td>21,060</td>
+            <td>16,133</td>
+            <td>145,193</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="row row-col-2">
+      <div>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th colspan="4">Invoice History</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Invoice Month</td>
+              <td>Invoice Number</td>
+              <td>Invoice Amount</td>
+              <td width="20%">Paid</td>
+            </tr>
+            <%=render 'invoice_histories/index' %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="row row-col-2 row-reverse">
+      <div class="grand-total">
+        <div class="grand-total-heading">GRAND TOTAL:</div>
+        <div class="grand-total-data">GRAND TOTAL:</div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-heading">
+        <div>Payment Details (For Online Remittance</div>
+        <div>Payment Details (For Online Remittance</div>
+      </div>
+      <div class="panel-body">
+        <div class="border-right">
+          <p><span>Account Name/Beneficiary:</span> Zero Time Network</p>
+          <p><span>Account Numb:</span> 301000004695</p>
+          <p><span>Branch Code:</span> 3030</p>
+          <p><span>Bank:</span> Faysal Bank Limited</p>
+          <p><span>Branch Name</span> Al Majid Center, GT Road, Gujranwala</p>
+          <p><span>IBAN Number:</span> PK38fays3030301000004695</p>
+        </div>
+        <div>
+          <p>Billing Control </p>
+          <p>billing@ztn.com.pk</p>
+          <p>For online transfers, please email payment evidence with invoice details.</p>
+        </div>
+      </div>
+    </div>
+
+    <h5 class="sig">System Generated Invoice Does Not Require Signature</h5>
+
+    <div class="card">
+      <span>System Generated Invoice Does Not Require Signature</span>
+      <div>
+        <ol>
+          <li>Where applicable the exchange rate between US Dollar and PAK rupee should be the interbank selling rate
+            ("www.brecorder.com") prevailing on the date of
+            invoice</li>
+          <li>Please ignore past due details if payment is already made.</li>
+          <li>Payment shall be made through Cross cheque/Pay Order in the name of "Zero Time </li>
+          <li>Incase no written objection received within 10 calendar days after receipt of invoice shall constitute
+            irrevocable acceptance of the invoice and services stated . Incase no written objection received within 10
+            calendar days after receipt of invoice shall constitute irrevocable acceptance of the invoice and services
+            stated"</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="card">
+      <span>TAX CALCULATIONS:</span>
+      <div>
+        <p>ED in Islamabad Capital Territory & AJK is 17%. Sales TAX in KPK & BALOCHISTAN is on Total amount of services
+          charges is 19.5%. Sales TAX in Sindh is on Total services charges greater than 2,500 or 4Mbps is 19.5%. Sales
+          TAX in Punjab on Total amount of services charges is 19.5%, students are exempt upto PKR 1,500 per month.
+          Advance income TAX on internet services </p>
+      </div>
+    </div>
+
+
+    <footer>601 / 6, Al-Hafeez Business Center, Block-B3, Gulberg-III, Lah</footer>
+
+  </div>
+
+
+</body>
+
+</html>

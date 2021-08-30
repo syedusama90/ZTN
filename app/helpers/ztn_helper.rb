@@ -1,0 +1,2 @@
+module ZtnHelper
+end

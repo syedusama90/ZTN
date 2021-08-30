@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Invoicemonth:</strong>
+  <%= @invoice_history.invoiceMonth %>
+</p>
+
+<p>
+  <strong>Invoivenumber:</strong>
+  <%= @invoice_history.invoiveNumber %>
+</p>
+
+<p>
+  <strong>Invoiceamount:</strong>
+  <%= @invoice_history.invoiceAmount %>
+</p>
+
+<p>
+  <strong>Paid:</strong>
+  <%= @invoice_history.Paid %>
+</p>
+
+<%= link_to 'Edit', edit_invoice_history_path(@invoice_history) %> |
+<%= link_to 'Back', invoice_histories_path %>
