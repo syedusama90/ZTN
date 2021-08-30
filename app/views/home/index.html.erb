@@ -20,12 +20,7 @@
           </a>
         </div>
         <div class="info">
-          <p><span>Customer Name:</span> STYLERS INTERNATIONAL</p>
-          <p><span>POC:</span> MR. AURANGZAIB - 0315 4502041</p>
-          <p><span>Billing Address:</span> ANAM ROAD, OFF. FEROZEPUR ROAD, </p>
-          <p><span>Installation Address:</span> ANAM ROAD, OFF. FEROZEPUR ROAD, LAHORE</p>
-          <p><span>Attendant/Contact:</span> MR MIAN RIZWAN</p>
-          <p><span>STAX NO/NTN:</span> </p>
+        <%= render 'customer_details/index' %>
         </div>
       </div>
       <div class="col">
@@ -92,30 +87,15 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>Invoice Month</td>
-              <td>Invoice Number</td>
-              <td>nvoice Amount</td>
-              <td width="20%">Paid</td>
-            </tr>
-            <tr>
-              <td>Aug-20</td>
-              <td>Aug21-10001-601</td>
-              <td>145,193</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>&nbsp;</td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>&nbsp;</td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
+          <tr>
+            <td>Invoice Month</td>
+            <td>Invoice Number</td>
+            <td>Invoice Amount</td>
+            <td width="20%">Paid</td>
+          </tr>
+          <tr>
+          <%= render 'invoice_histories/index' %>
+          </tr>
           </tbody>
         </table>
       </div>

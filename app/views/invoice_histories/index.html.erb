@@ -1,0 +1,28 @@
+<%= stylesheet_link_tag 'application'%>
+<h1>Invoice History</h1>
+
+<table class="table table-dark table-striped table-bordered">
+  <thead>
+    <tr>
+      <td>Invoice Month</td>
+      <td>Invoice Number</td>
+      <td>Invoice Amount</td>
+      <td width="20%">Paid</td>
+      <td colspan="3"></td>
+    </tr>
+  </thead>
+
+  <tbody><% @invoice_histories.each do |invoice_history| %>
+    <td><%= invoice_history.invoiceMonth %></td>
+    <td><%= invoice_history.invoiveNumber %></td>
+    <td><%= invoice_history.invoiceAmount %></td>
+    <td><%= invoice_history.Paid %></td>
+        <td><%= link_to 'Show', invoice_history ,class:"btn btn-secondary btn-sm" %></td>
+        <td><%= link_to 'Edit', edit_invoice_history_path(invoice_history),class:"btn btn-secondary btn-sm" %></td>
+        <td><%= link_to 'Destroy',invoice_history, method: :delete, data: { confirm: 'Are you sure?' } , class: "delete" ,class:"btn btn-secondary btn-sm" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+<%= link_to 'New Invoice', new_invoice_history_path , class: "btn btn-dark" %>

@@ -1,0 +1,8 @@
+        <% @customer_details.each do |customer_detail| %>
+          <p><span>Customer Name:</span> <%= customer_detail.CustomerName %></p>
+          <p><span>POC:</span><%= customer_detail.POC %></p>
+          <p><span>Billing Address:</span><%= customer_detail.BillingAddress %> </p>
+          <p><span>Installation Address:</span> <%= customer_detail.InstallationAddress %></p>
+          <p><span>Attendant/Contact:</span><%= customer_detail.AttendentContact %></p>
+          <p><span>STAX NO/NTN:</span> </p>
+           <% end %>

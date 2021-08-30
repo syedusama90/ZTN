@@ -1,9 +1,6 @@
 <% @invoice_histories.each do |invoice_history| %>
-  <tr>
     <td><%= invoice_history.invoiceMonth %></td>
     <td><%= invoice_history.invoiveNumber %></td>
     <td><%= invoice_history.invoiceAmount %></td>
     <td><%= invoice_history.Paid %></td>
-    <td><%= link_to 'Destroy', invoice_history, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
 <% end %>
