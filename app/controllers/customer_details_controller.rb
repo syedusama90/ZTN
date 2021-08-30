@@ -4,7 +4,7 @@ class CustomerDetailsController < ApplicationController
   # GET /customer_details or /customer_details.json
   def index
     @customer_details = CustomerDetail.all
-    @invoice_histories = InvoiceHistory.all
+    # @invoice_histories = InvoiceHistory.all
   end
 
   # GET /customer_details/1 or /customer_details/1.json

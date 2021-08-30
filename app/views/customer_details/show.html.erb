@@ -1,5 +1,12 @@
 <p id="notice"><%= notice %></p>
-
+<%= stylesheet_link_tag 'application'%>
+<section class="vh-100 gradient-custom">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card  text-white" style="border-radius: 1rem;">
+          <div class="card-body p-5 text-center">
+            <div class="mb-md-5 mt-md-4 pb-5">
 <p>
   <strong>Customername:</strong>
   <%= @customer_detail.CustomerName %>
@@ -25,5 +32,8 @@
   <%= @customer_detail.AttendentContact %>
 </p>
 
-<%= link_to 'Edit', edit_customer_detail_path(@customer_detail) %> |
-<%= link_to 'Back', customer_details_path %>
+<%= link_to 'Edit', edit_customer_detail_path(@customer_detail),class:"btn btn-outline-light btn-lg px-5" %>
+<%= link_to 'Back', customer_details_path ,class:"btn btn-outline-light btn-lg px-5" %>
+<br/>
+<br/>
+<%=link_to "Invoices" , invoice_histories_path,class:"btn btn-outline-light btn-lg px-5" %>

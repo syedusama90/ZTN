@@ -1,0 +1,8 @@
+<% @amounts.each do |amount| %>
+<td><%= @amounts.index(amount) + 1 %></td>  
+<td><%= amount.description %></td>
+<td><%= amount.price %></td>
+<td><%= amount.PRA %></td>
+<td><%= amount.AIT %></td>
+<td><%= amount.totalprice %></td>
+<% end %>

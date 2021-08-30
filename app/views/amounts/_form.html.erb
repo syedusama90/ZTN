@@ -1,0 +1,50 @@
+<%= stylesheet_link_tag 'application'%>
+<section class="vh-100 gradient-custom">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card  text-white" style="border-radius: 1rem;">
+          <div class="card-body p-5 text-center">
+            <div class="mb-md-5 mt-md-4 pb-5">
+<%= form_with(model: amount) do |form| %>
+  <% if amount.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(amount.errors.count, "error") %> prohibited this amount from being saved:</h2>
+
+      <ul>
+        <% amount.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.text_field :price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :PRA %>
+    <%= form.text_field :PRA %>
+  </div>
+
+  <div class="field">
+    <%= form.label :AIT %>
+    <%= form.text_field :AIT %>
+  </div>
+
+  <div class="field">
+    <%= form.label :totalprice %>
+    <%= form.text_field :totalprice %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,23 +1,24 @@
 <%= stylesheet_link_tag 'application'%>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <h1>Customer Detail</h1>
-
+<%= link_to " Add New Customer", new_customer_detail_path , class:"btn btn-outline-dark btn-sm px-5 fa fa-user-plus" , id:"CustomerBtn" %>
+<br/>
+<br/>
 <table class="table table-dark table-striped table-bordered">
   <thead>
     <tr>
-      <td>Customer Name:</td>
-      <td>Billing Address:</td>
+      <td><b>Customer Name:</b></td>
+      <td><b>Billing Address:</b></td>
       <td colspan="3"></td>
     </tr>
   </thead>
   <% @customer_details.each do |customer_detail| %>
     <td><%= customer_detail.CustomerName %></td>
     <td><%= customer_detail.BillingAddress %> </td>
-    <td><%= link_to 'Show', invoice_histories_path ,class:"btn btn-secondary btn-sm" %></td>
-    <td><%= link_to 'Edit', edit_customer_detail_path(customer_detail),class:"btn btn-secondary btn-sm" %></td>
-    <td><%= link_to 'Destroy',customer_detail, method: :delete, data: { confirm: 'Are you sure?' } , class: "delete" ,class:"btn btn-secondary btn-sm" %></td>
+    <td><%= link_to 'Show', customer_detail, class:"btn btn-outline-light btn-sm px-5" %></td>
+    <td><%= link_to 'Edit', edit_customer_detail_path(customer_detail), class:"btn btn-outline-light btn-sm px-5" %></td>
+    <td><%= link_to 'Destroy',customer_detail, method: :delete, data: { confirm: 'Are you sure?' } , class: "delete" , class:"btn btn-outline-light btn-sm px-5" %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-<br>
-<%= link_to 'Customer Detail', new_customer_detail_path , class: "btn btn-dark" %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @amount.description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @amount.price %>
+</p>
+
+<p>
+  <strong>Pra:</strong>
+  <%= @amount.PRA %>
+</p>
+
+<p>
+  <strong>Ait:</strong>
+  <%= @amount.AIT %>
+</p>
+
+<p>
+  <strong>Totalprice:</strong>
+  <%= @amount.totalprice %>
+</p>
+
+<%= link_to 'Edit', edit_amount_path(@amount) %> |
+<%= link_to 'Back', amounts_path %>
